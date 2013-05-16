@@ -1,0 +1,14 @@
+#VARIABLE {wotmad_stat_apikey} {0}
+#VARIABLE {wotmad_stat_submitted} {0}
+
+#ACTION {You are a %d year old {male|female} {human|trolloc|seanchan} %w.$} {#var wotmad_stat_sex %2;#var wotmad_stat_faction %3;#var wotmad_stat_class %4} {5}
+#ACTION {You feel dizzy as time seems to spin backwards...$} {wotmad_stat_reset} {5}
+#ACTION {You gain a level!} {wotmad_stat_level} {5}
+#ACTION {^This ranks you as %w {of|the} %+ (Level %d).} {#var wotmad_stat_name %1;#var wotmad_stat_homeland %3;#var wotmad_stat_level %4;#if {$wotmad_stat_level == 3} {#if {$wotmad_stat_submitted == 0} {wotmad_stat_submit}}} {5}
+#ACTION {^Your base abilities are: Str:%d Int:%d Wil:%d Dex:%d Con:%d.$} {#var wotmad_stat_str %1;#var wotmad_stat_int %2;#var wotmad_stat_wil %3;#var wotmad_stat_dex %4;#var wotmad_stat_con %5} {5}
+
+#ALIAS {wotmad_stat_apikey} {#var wotmad_stat_apikey %1} {5}
+#ALIAS {wotmad_stat_level} {stat;score} {5}
+#ALIAS {wotmad_stat_reset} {#var wotmad_stat_submitted 0;#unvar wotmad_stat_class;#unvar wotmad_stat_con;#unvar wotmad_stat_dex;#unvar wotmad_stat_faction;#unvar wotmad_stat_homeland;#unvar wotmad_stat_int;#unvar wotmad_stat_level;#unvar wotmad_stat_name;#unvar wotmad_stat_sex;#unvar wotmad_stat_str;#unvar wotmad_stat_wil} {5}
+#ALIAS {wotmad_stat_submit} {#var wotmad_stat_submitted 1;#run {wotmad_stat_submit} {wget -qO- "http://wotmad.herokuapp.com/stats/submit/?apikey=${wotmad_stat_apikey}&name=${wotmad_stat_name}&sex=${wotmad_stat_sex}&faction=${wotmad_stat_faction}&class=${wotmad_stat_class}&homeland=${wotmad_stat_homeland}&strength=${wotmad_stat_str}&intel=${wotmad_stat_int}&wil=${wotmad_stat_wil}&dex=${wotmad_stat_dex}&con=${wotmad_stat_con}"}} {5}
+
