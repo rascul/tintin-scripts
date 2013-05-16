@@ -1,6 +1,8 @@
 wotmad-stats
 ============
 
+NOTE: THIS SCRIPT IS FOR WOTMAD http://wotmad.herokuapp.com
+
 This script allows you to automatically submit your new stats to this site. 
 Note that you'll need to set your API key, which you can get by going to 
 the stats page and clicking the 'contribute' link. Once you have your API 
