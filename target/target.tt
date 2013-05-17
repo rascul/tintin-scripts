@@ -1,0 +1,112 @@
+#ALIAS {k1}
+{
+	#regexp {%1} {%+} {kill %1.$target1};
+	#else
+	{
+		kill $target1
+	}
+	#variable target $target1
+}
+{5}
+
+#ALIAS {k2}
+{
+	#regexp {%1} {%+} {kill %1.$target2};
+	#else
+	{
+		kill $target2
+	}
+	#variable target $target2
+}
+{5}
+
+#ALIAS {k3}
+{
+	#regexp {%1} {%+} {kill %1.$target3};
+	#else
+	{
+		kill $target3
+	}
+	#variable target $target3
+}
+{5}
+
+#ALIAS {k4}
+{
+	#regexp {%1} {%+} {kill %1.$target4};
+	#else
+	{
+		kill $target4
+	}
+	#variable target $target4
+}
+{5}
+
+#ALIAS {kk}
+{
+	#regexp {%1} {%+} {kill %1.$target};
+	#else
+	{
+		kill $target
+	}
+}
+{5}
+
+#ALIAS {t1}
+{
+	#variable target1 %1
+}
+{5}
+
+#ALIAS {t2}
+{
+	#variable target2 %1
+}
+{5}
+
+#ALIAS {t3}
+{
+	#variable target3 %1
+}
+{5}
+
+#ALIAS {t4}
+{
+	#variable target4 %1
+}
+{5}
+
+#ALIAS {target}
+{
+	#variable target %1
+}
+{5}
+
+#MACRO {\eOP}
+{
+	kill $target1;
+	#variable target $target1
+}
+
+#MACRO {\eOQ}
+{
+	kill $target2;
+	#variable target $target2
+}
+
+#MACRO {\eOR}
+{
+	kill $target3;
+	#variable target $target3
+}
+
+#MACRO {\eOS}
+{
+	kill $target4;
+	#variable target $target4
+}
+
+#MACRO {`}
+{
+	kill $target
+}
