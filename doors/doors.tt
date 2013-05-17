@@ -1,0 +1,76 @@
+ 
+#ACTION {A closed '%1'}
+{
+	#variable door %1
+}
+{5}
+
+#ACTION {The %1 is closed.}
+{
+	#variable door %1
+}
+{5}
+
+#ACTION {The %1 is obviously open.}
+{
+	#variable door %1
+}
+{5}
+
+#ACTION {The %1 is open.}
+{
+	#variable door %1
+}
+{5}
+
+#ACTION {The %1 seems to be closed.}
+{
+	#variable door %1
+}
+{5}
+
+#ACTION {They already seem to be stunned.}
+{
+	bash
+}
+{5}
+#ACTION {You skillfully discover a hidden %1.}
+{
+	#variable door %1
+}
+{5}
+#ALIAS {cd}
+{
+	close $door
+}
+{5}
+#ALIAS {door}
+{
+	#variable door %1
+}
+{5}
+#ALIAS {kdd}
+{
+	knock $door
+}
+{5}
+#ALIAS {ld}
+{
+	lock $door
+}
+{5}
+#ALIAS {od}
+{
+	open $door
+}
+{5}
+#ALIAS {pd}
+{
+	pick $door
+}
+{5}
+#ALIAS {ud}
+{
+	unlock $door
+}
+{5}
