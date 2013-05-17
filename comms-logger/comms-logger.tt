@@ -1,11 +1,57 @@
-#ACTION {%1 bellows '%2'} {#line {log} {.wotmud-comms}} {5}
-#ACTION {%1 chats '%2'} {#line {log} {.wotmud-comms}} {5}
-#ACTION {%1 narrates '%2'} {#line {log} {.wotmud-comms}} {5}
-#ACTION {%1 speaks from the %2 '%3'} {#line {log} {.wotmud-comms}} {5}
-#ACTION {%1 tells you '%2'} {#line {log} {.wotmud-comms}} {5}
-#ACTION {You bellow '%1'} {#line {log} {.wotmud-comms}} {5}
-#ACTION {You chat '%1'} {#line {log} {.wotmud-comms}} {5}
-#ACTION {You narrate '%1'} {#line {log} {.wotmud-comms}} {5}
-#ACTION {You reply to %1 '%2'} {#line {log} {.wotmud-comms}} {5}
-#ACTION {You tell %1 '%2'} {#line {log} {.wotmud-comms}} {5}
+#ACTION {%1 bellows '%2'}
+{
+	#line {log} {.wotmud-comms}
+}
+{5}
 
+#ACTION {%1 chats '%2'}
+{
+	#line {log} {.wotmud-comms}
+}
+{5}
+
+#ACTION {%1 narrates '%2'}
+{
+	#line {log} {.wotmud-comms}
+}
+{5}
+
+#ACTION {%1 speaks from the %2 '%3'}
+{
+	#line {log} {.wotmud-comms}
+}
+{5}
+
+#ACTION {%1 tells you '%2'}
+{
+	#line {log} {.wotmud-comms}
+}
+{5}
+#ACTION {You bellow '%1'}
+{
+	#line {log} {.wotmud-comms}
+}
+{5}
+
+#ACTION {You chat '%1'}
+{
+	#line {log} {.wotmud-comms}
+}
+{5}
+
+#ACTION {You narrate '%1'}
+{
+	#line {log} {.wotmud-comms}
+}
+{5}
+
+#ACTION {You reply to %1 '%2'}
+{
+	#line {log} {.wotmud-comms}
+}
+{5}
+#ACTION {You tell %1 '%2'}
+{
+	#line {log} {.wotmud-comms}
+}
+{5}
