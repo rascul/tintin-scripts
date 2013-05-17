@@ -1,0 +1,48 @@
+#ALIAS {dh}
+{
+	dismount
+}
+{5}
+
+#ALIAS {dih}
+{
+	#regexp {%1} {%+} {dia %1.$horse};
+	#else
+	{
+		dia $horse
+	}
+}
+{5}
+
+#ALIAS {hh}
+{
+	horse horse
+}
+{5}
+
+#ALIAS {horse}
+{
+	#variable horse %1
+}
+{5}
+
+#ALIAS {lh}
+{
+	#regexp {%1} {%+} {lead %1.$horse};
+	#else
+	{
+		lead $horse
+	}
+}
+{5}
+
+#ALIAS {rh}
+{
+	#regexp {%1} {%+} {ride %1.$horse};
+	#else
+	{
+		ride $horse
+	}
+}
+{5}
+
