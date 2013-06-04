@@ -1,0 +1,10 @@
+#MACRO {\e[1;5C}
+{
+	#cursor next word
+}
+
+#MACRO {\e[1;5D}
+{
+	#cursor prev word
+}
+
