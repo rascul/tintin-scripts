@@ -1,0 +1,10 @@
+#ALIAS {noidle}
+{
+	#ticker {idle} {\} {200}
+}
+{5}
+#ALIAS {stopnoidle}
+{
+	#unticker idle
+}
+{5}
