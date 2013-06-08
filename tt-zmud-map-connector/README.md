@@ -25,12 +25,6 @@ When you connect to the mud from tintin++, you should be able to see
 stuff in the zmud window as you're walking around. This is what is going
 to drive the map.
 
-Load up the map, and reconfigure it. Set the seconds of delay to 10 seconds
-so you have time. When you hit next in the zmud map configuration window,
-you'll have to go to tintin++ and hit whatever direction. Be sure you're in
-a room where you can travel in that direction. Go through the screens,
-ensuring the mapper has the room name, description and exits matched properly.
-
 Go to the mapper, set your current position. The map should now follow you around.
 
 When you flee, the map will automatically find where you fled to. Whenever
