@@ -29,11 +29,6 @@
 }
 {5}
 
-#ACTION {They already seem to be stunned.}
-{
-	bash
-}
-{5}
 #ACTION {You skillfully discover a hidden %1.}
 {
 	#variable door %1
