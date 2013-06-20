@@ -1,0 +1,15 @@
+#CLASS {mapd} {enable}
+#VAR desc {}
+#VAR name {} {}
+#VAR exits {} {}
+#VAR num {}
+#TRIGGER {^ACTION: flee} {#t+ desc;#var num {%roomnum( )}}
+#TRIGGER {^ACTION: findme} {#t+ desc}
+#TRIGGER {^ACTION: move %1} {#move %1;#t+ desc;#var num {%roomnum( )}}
+#TRIGGER {^ACTION: look} {#t+ desc}
+#TRIGGER {^ROOM: %1} {#var name {%1}}
+#TRIGGER "desc" {^DESC: %1} {#var desc {%1};#t- desc} "" {disable}
+#TRIGGER {^EXITS: %1} {#var exits {%1}}
+#TRIGGER {} {}
+#CLASS 0
+

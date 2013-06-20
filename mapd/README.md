@@ -1,4 +1,4 @@
-tt-zmud-map-connector
+mapd
 =====================
 This is a connector. Allows you to use tintin++ on linux to mud, and
 connect with zmud to use a map in zmud's mapper and have it follow you

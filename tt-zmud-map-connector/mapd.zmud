@@ -1,1 +1,0 @@
-#tr {^ACTION: move (%w)} {#echo %1}

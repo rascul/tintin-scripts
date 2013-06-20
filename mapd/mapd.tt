@@ -23,9 +23,15 @@
 #alias mapd_stop_desc {#unaction {^%*$}}
 
 
+
 #alias mapd_send_room {mapd_send_action;#mapd #send ROOM: $room}
-#alias mapd_send_exits {#mapd #send EXIT: $exits}
+#alias mapd_send_exits {#mapd #send EXITS: $exits }
 #alias mapd_send_desc {#mapd #send DESC: %0}
+
+
+
+
+
 
 #alias mapd_send_action {actionget;actionpop;#if {&action} {#regex {$action} {0} {#mapd send ACTION: look} {#mapd #send ACTION: $action;#unvar action}}}
 
