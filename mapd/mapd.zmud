@@ -1,15 +1,16 @@
 #CLASS {mapd} {enable}
-#VAR desc {}
+#ALIAS findme {#var namel {%mapquery( NAME = '@name')};#var descl {};#var exitl {};#if (%numitems( @namel) = 0) {#echo no matching room names} {#if (%numitems( @namel) = 1) {#echo room found by name;#teleport @namel} {#forall @namel {#if (%pos( @desc, %roomdesc( %i))) {#additem descl %i}};#if (%numitems( @descl) = 0) {#echo no matching room descriptions} {#if (%numitems( @descl) = 1) {#echo room found by description;#teleport @descl} {#var exitsf {%sort( %lower( %replace( @exits, " ", "|")))};#forall @descl {#if (@exitsf =~ "%sort(%roomexit( %i))") {#additem exitl %i}};#if (%numitems( @exitl) = 0) {#echo no matching room exits, possible hidden door confusion;#echo unable to find current room} {#if (%numitems( @exitl) = 1) {#echo room found by exits;#teleport @exitl} {#if (%ismember( %roomkey, @exitl)) {#echo multiple rooms found by exits, current room is in the list, no action taken} {#echo multiple rooms found by exits, choosing the first match;#teleport %item( @exitl, 1)}}}}}}};#unvar namel;#unvar descl;#unvar exitl}
+#VAR desc {} {}
 #VAR name {} {}
 #VAR exits {} {}
-#VAR num {}
-#TRIGGER {^ACTION: flee} {#t+ desc;#var num {%roomnum( )}}
-#TRIGGER {^ACTION: findme} {#t+ desc}
-#TRIGGER {^ACTION: move %1} {#move %1;#t+ desc;#var num {%roomnum( )}}
-#TRIGGER {^ACTION: look} {#t+ desc}
+#VAR num {} {}
+#VAR findme {0} {0}
+#TRIGGER {^ACTION: flee} {#t+ desc;#var num {%roomnum( )};#var findme {0}}
+#TRIGGER {^ACTION: findme} {#t+ desc;#var findme {1}}
+#TRIGGER {^ACTION: move %1} {#move %1;#t+ desc;#var num {%roomnum( )};#var findme {0}}
+#TRIGGER {^ACTION: look} {#t+ desc;#var findme {0}}
 #TRIGGER {^ROOM: %1} {#var name {%1}}
 #TRIGGER "desc" {^DESC: %1} {#var desc {%1};#t- desc} "" {disable}
-#TRIGGER {^EXITS: %1} {#var exits {%1}}
-#TRIGGER {} {}
+#TRIGGER {^EXITS: %1} {#var exits {%1};#if (@findme == 1) {#var findme {0};findme}}
 #CLASS 0
 
