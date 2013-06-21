@@ -22,6 +22,7 @@
 #action {You can't ride there on a horse!} {actionpop} {1}
 #action {You can't ride on water.} {actionpop} {1}
 #action {Nah... You feel too relaxed to do that..} {actionpop} {1}
+#action {PANIC!  You couldn't escape!} {actionpop} {1}
 
 #alias room {#var room %0}
 #alias exits {#var exits %0}
