@@ -15,6 +15,7 @@
 #action {No way!  You're fighting for your life!} {actionpop} {1}
 #action {You would need to swim there, you can't just walk it.} {actionpop} {1}
 #action {You are too exhausted.} {actionpop} {1}
+#action {You need a boat to go there.} {actionpop} {1}
 
 #alias room {#var room %0}
 #alias exits {#var exits %0}
