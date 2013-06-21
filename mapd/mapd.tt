@@ -16,6 +16,12 @@
 #action {You would need to swim there, you can't just walk it.} {actionpop} {1}
 #action {You are too exhausted.} {actionpop} {1}
 #action {You need a boat to go there.} {actionpop} {1}
+#action {You would need to swim there, you can't just walk it.} {actionpop} {1}
+#action {You shudder at the concept of crossing water.} {actionpop} {1}
+#action {You need to swim to go there.} {actionpop} {1}
+#action {You can't ride there on a horse!} {actionpop} {1}
+#action {You can't ride on water.} {actionpop} {1}
+#action {Nah... You feel too relaxed to do that..} {actionpop} {1}
 
 #alias room {#var room %0}
 #alias exits {#var exits %0}
