@@ -38,29 +38,47 @@
   #unvar descl
   #unvar exitl
   }
-#VAR desc {This room is where lodging can be obtained and paid for. A counter runs across} {}
-#VAR name {Reception of the Stag and Lion} {}
-#VAR exits {D} {}
+#ALIAS flee {
+  #var foundroom {0}
+  #if (%numitems( %roomexit( @num)) = 1) {#var foundroom {%roomlink( @num, %roomexit( @num))}} {#FORALL %roomexit( @num) {#FORALL %roomlink( @num, %i) {#if (@name =~ "%roomname( %j)") {#if (%pos( @desc, %roomdesc( %j))) {#if (%sort( %lower( %replace( @exits, " ", "|"))) =~ "%sort(%roomexit( %j))") {#var foundroom %j}}}}}}
+  #if (@foundroom) {
+    #echo found location
+    #teleport @foundroom
+    } {
+    #echo unable to find location by exits, performing in depth search
+    findme
+    }
+  
+  }
+#VAR desc {} {}
+#VAR name {} {}
+#VAR exits {} {}
 #VAR num {} {}
 #VAR findme {0} {0}
+#VAR flee {0} {0}
+#VAR foundroom {} {}
 #TRIGGER {^ACTION: flee} {
   #t+ desc
   #var num {%roomnum( )}
   #var findme {0}
+  #var flee {1}
   }
 #TRIGGER {^ACTION: findme} {
   #t+ desc
   #var findme {1}
+  #var flee {0}
   }
 #TRIGGER {^ACTION: move %1} {
   #move %1
   #t+ desc
   #var num {%roomnum( )}
   #var findme {0}
+  #var flee {0}
   }
 #TRIGGER {^ACTION: look} {
   #t+ desc
   #var findme {0}
+  #var flee {0}
   }
 #TRIGGER {^ROOM: %1} {#var name {%1}}
 #TRIGGER "desc" {^DESC: %1} {
@@ -69,9 +87,13 @@
   } "" {disable}
 #TRIGGER {^EXITS: %1} {
   #var exits {%1}
-  #if (@findme == 1) {
+  #if (@findme = 1) {
     #var findme {0}
     findme
+    }
+  #if (@flee = 1) {
+    #var flee {0}
+    flee
     }
   }
 #CLASS 0
