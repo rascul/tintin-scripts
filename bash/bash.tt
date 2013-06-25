@@ -1,11 +1,2 @@
-#ALIAS {boff}
-{
-	#unaction They already seem to be stunned.
-}
-{5}
-
-#ALIAS {bon}
-{
-	#action {They already seem to be stunned.} {bash}
-}
-{5}
+#ALIAS {boff} {#unaction They already seem to be stunned.} {5}
+#ALIAS {bon} {#action {They already seem to be stunned.} {bash}} {5}

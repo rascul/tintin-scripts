@@ -1,41 +1,7 @@
-#ACTION {As %1 avoids your bash, you topple over and fall to the ground!}
-{
-        bashmiss
-}
-{5}
-
-#ACTION {Your bash at %1 sends %2 sprawling!}
-{
-        bashland;
-        #variable lastbash %1
-}
-{5}
-
-#ALIAS {bashes}
-{
-        #math {totalbashes} {$basheslanded + $bashesmissed};
-        #showme You have landed $basheslanded out of $totalbashes bashes.;
-        #showme You last landed a bash against $lastbash.
-}
-{5}
-
-#ALIAS {bashland}
-{
-        #math {basheslanded} {$basheslanded + 1}
-}
-{5}
-
-#ALIAS {bashmiss}
-{
-        #math {bashesmissed} {$bashesmissed + 1}
-}
-{5}
-
-#ALIAS {resetbashes}
-{
-        #variable bashesmissed 0;
-        #variable basheslanded 0;
-        #variable lastbash {}
-}
-{5}
+#ACTION {As %1 avoids your bash, you topple over and fall to the ground!} {bashmiss} {5}
+#ACTION {Your bash at %1 sends %2 sprawling!} {bashland;#variable lastbash %1} {5}
+#ALIAS {bashes} {#math {totalbashes} {$basheslanded + $bashesmissed};#showme You have landed $basheslanded out of $totalbashes bashes.;#showme You last landed a bash against $lastbash.} {5}
+#ALIAS {bashland} {#math {basheslanded} {$basheslanded + 1}} {5}
+#ALIAS {bashmiss} {#math {bashesmissed} {$bashesmissed + 1}} {5}
+#ALIAS {resetbashes} {#variable bashesmissed 0;#variable basheslanded 0;#variable lastbash {}} {5}
 

@@ -1,2 +1,2 @@
-#HIGHLIGHT        {^[ obvious exits:%1 ]$}    {cyan}  {5}
+#HIGHLIGHT {^[ obvious exits:%1 ]$} {cyan} {5}
 

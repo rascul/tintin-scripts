@@ -1,18 +1,2 @@
-#ALIAS {checklink}
-{
-	#gag {Hug who?};
-	#action {Hug who?} {checklink_after};
-	hug;
-	#script {checklink_date_before} {date +%s%N}
-}
-{5}
-
-#ALIAS {checklink_after}
-{
-	#script {checklink_date_after} {date +%s%N};
-	#unaction {Hug who?};
-	#math {checklink_elapsed} {($checklink_date_after[1] - $checklink_date_before[1]) / 1000000};
-	#showme Elapsed time: $checklink_elapsed ms;
-	#ungag{Hug who?}
-}
-{5}
+#ALIAS {checklink} {#gag {Hug who?};#action {Hug who?} {checklink_after};hug;#script {checklink_date_before} {date +%s%N}} {5}
+#ALIAS {checklink_after} {#script {checklink_date_after} {date +%s%N};#unaction {Hug who?};#math {checklink_elapsed} {($checklink_date_after[1] - $checklink_date_before[1]) / 1000000};#showme Elapsed time: $checklink_elapsed ms;#ungag{Hug who?}} {5}
