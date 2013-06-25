@@ -4,6 +4,7 @@
 
 #action {~\e[0m\e[36m%1$} {#regex {%1} {%w speaks from the %*} {#line {log} {.wotmud-comms}} {room %1;mapd_start_desc;mapd_send_room}} {1}
 #action {^[ obvious exits: %1 ]$} {exits %1;mapd_stop_desc;mapd_send_exits} {1}
+#action {^[ obvious exits: ]$} {exits {};mapd_stop_desc;mapd_send_exits} {1}
 #action {~%1 HP:%2 MV:%3 > \e[36m%4$} {#regex {%4} {%w speaks from the %*} {#nop} {room %4;mapd_start_desc;mapd_send_room}} {1}
 
 #action {It is pitch black...} {mapd_send_action} {1}
