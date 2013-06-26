@@ -25,6 +25,7 @@
 #action {Nah... You feel too relaxed to do that..} {actionpop} {1}
 #action {PANIC!  You couldn't escape!} {actionpop} {1}
 #action {You would need to climb there from here.} {actionpop} {1}
+#action {The %1 seems to be closed.} {actionpop;#variable door %1} {1}
 
 #alias room {#var room %0}
 #alias exits {#var exits %0}
