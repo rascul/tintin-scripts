@@ -1,0 +1,9 @@
+#ALIAS {buddy} {#variable buddy %1} {5}
+#ALIAS {gb} {group $buddy} {5}
+#ALIAS {fb} {follow $buddy} {5}
+#ALIAS {tb} {tell $buddy} {5}
+#ALIAS {ab} {assist $buddy} {5}
+#ALIAS {rb} {rescue $buddy} {5}
+#ALIAS {wb} {whois $buddy} {5}
+#ALIAS {db} {dia $buddy} {5}
+
