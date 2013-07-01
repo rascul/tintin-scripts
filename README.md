@@ -11,6 +11,6 @@ If you're having issues with colors or `#highlight` then set packet patch to som
 `#line` has some issues with tintin-2.00.9, either use 2.00.8 or 2.01.0 beta 
 for now if you need `#line` to function properly.
 
-These may work to some extent in wintin++. I have no idea and don't intend to test it or
-support it. If, however, you try some of my scripts and find that they do work, consider
-letting me know and I'll make a note about it in the appropriate README.
+These may work to some extent in wintin++. I have no idea. If you try some of my scripts
+and find that they do work, consider letting me know and I'll make a note about it in
+the appropriate README.
