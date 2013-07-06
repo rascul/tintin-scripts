@@ -14,3 +14,6 @@ for now if you need `#line` to function properly.
 These may work to some extent in wintin++. I have no idea. If you try some of my scripts
 and find that they do work, consider letting me know and I'll make a note about it in
 the appropriate README.
+
+If you would like tintin++ to be wrapped up in gtk and vte, see
+[vtin](https://github.com/ray-schulz/vtin).
