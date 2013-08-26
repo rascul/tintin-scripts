@@ -1,7 +1,7 @@
 tintin-scripts
 ==============
 
-This is my collection of tintin++ scripts for WoTMUD.
+This is my collection of [tintin++](http://tintin.sourceforge.net) ([http://tintin.sourceforge.net]()) scripts for WoTMUD.
 
 I have changed the format of my scripts, now you can copy/paste directly into tintin++.
 
