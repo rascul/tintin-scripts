@@ -16,4 +16,4 @@ and find that they do work, consider letting me know and I'll make a note about 
 the appropriate README.
 
 If you would like tintin++ to be wrapped up in gtk and vte, see
-[vtin](https://github.com/ray-schulz/vtin).
+[vtin](https://github.com/rascul/vtin).
