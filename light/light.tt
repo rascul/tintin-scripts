@@ -1,0 +1,5 @@
+#alias light {#regexp {%1} {%+} {#var light %1} {get $light $bag;hold $light}}
+#alias rlight {rem $light;put $light $bag}
+#alias dlight {rem $light;drop $light}
+#alias el {#regexp {%1} {%+} {exam %1.$light} {exam $light}}
+
