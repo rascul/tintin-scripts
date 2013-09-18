@@ -1,0 +1,7 @@
+#alias wimpy #var wimpy %1
+#alias cmw cha mood wimpy
+#alias cmn cha mood normal
+#alias cmb cha mood brave
+#alias cmbb cha mood berserk
+#alias cw {#regexp {%1} {%+} {cha wimpy %1} {cha wimpy $wimpy}}
+
