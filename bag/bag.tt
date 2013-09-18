@@ -1,0 +1,4 @@
+#alias {bag} {#var bag %1}
+#alias {pap} {#regexp {%1} {%+} {put all %1.$bag} {put all $bag}}
+#alias {ep} {#regexp {%1} {%+} {exam %1.bag} {exam $bag}}
+
