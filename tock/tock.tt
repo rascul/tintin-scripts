@@ -1,0 +1,86 @@
+#action {The day has begun.} {tock} {5}
+#action {The sun rises} {tock} {5}
+#action {The sun sets.} {tock} {5}
+#action {You suddenly feel less protected.} {tock} {5}
+#action {Your heartbeat calms down more as you feel less panicked.} {tock} {5}
+#action {The night has begun.} {tock} {5}
+#action {* is about to go out!} {tock} {5}
+#action {A * is definitely fading.} {tock} {5}
+#action {* has gone out!} {tock} {5}
+#action {You move slightly, settling your cloak into position.} {tock} {5}
+#action {As you watch * seems to melt into the background, vanishing.} {tock} {5}
+#action {The rising sun casts both warm light and long shadows across the mountains.} {tock} {5}
+#action {The piercing rays of dawn peek above the eastern horizon.} {tock} {5}
+#action {The sun peeks over the topless towers of the city.} {tock} {5}
+#action {An orange glow covers the grassland as the sun slowly sinks into the horizon.} {tock} {5}
+#action {A shadow is cast over the land as the sun vanishes beyond Garen's Wall.} {tock} {5}
+#action {The sun's first rays touch the eastern slopes of Garen's Wall.} {tock} {5}
+#action {Radiant hues permeate the horizon as the sun sinks in the west.} {tock} {5}
+#action {A ball of red light rises slowly from the edge of the grassland, bringing light to the savannah.} {tock} {5}
+#action {Light begins to peak from behind the hills.} {tock} {5}
+#action {The sun sinks slowly beneath the rolling hills to the west.} {tock} {5}
+#action {Shadows lengthen as the sun approaches the horizon.} {tock} {5}
+#action {Morning dew glitters in the days first sunrays.} {tock} {5}
+#action {The Wheel of Time spins} {tock} {5}
+#action {The Wheel of Time turns toward} {tock} {5}
+#action {A glowing portal fades from existence.} {tock} {5}
+#action {The sun sinks below the western horizon.} {tock} {5}
+#action {The corpse of * has decayed into a pile of dust.} {tock} {5}
+#action {* begins to dim a little.} {tock} {5}
+#action {Your white aura has faded.} {tock} {5}
+#action {The sun drops quickly in the west in a glory of color.} {tock} {5}
+#action {As the sky burns in shades of fushia and gold the sun sets in the west.} {tock} {5}
+#action {The sun begins its journey to its peak in the sky.} {tock} {5}
+#action {Shadows embrace the city as twilight falls over Seandar.} {tock} {5}
+#action {The clouds in the east burn pink and violet with the rising of the sun.} {tock} {5}
+#action {You feel parched from the hot weather.} {tock} {5}
+#action {Low deep bronze tones fill the air as a wind blows from the north.} {tock} {5}
+#action {Darkness gently falls as the sun slips behind the rolling hills.} {tock} {5}
+#action {A warm glow is cast by the rising sun.} {tock} {5}
+#action {The last rays of light burn red against the foothills.} {tock} {5}
+#action {The sun slowly rises above the plains.} {tock} {5}
+#action {Shadows descend upon the land as the sun drops behind the hills to the west.} {tock} {5}
+#action {The dust of the plains in the air turns golden with the falling hush of dusk.} {tock} {5}
+#action {A warm glow bathes the Illian road in a bright light.} {tock} {5}
+#action {* disappears into the void.} {tock} {5}
+#action {The nocturnal sounds of the forest begin to rise as the sun sets in the west.} {tock} {5}
+#action {Thin rays of sunlight pierce the sky over the marshes.} {tock} {5}
+#action {Shadows grow beneath the peaks as dusk arrives.} {tock} {5}
+#action {The suns golden rays glisten over the Aryth ocean as it rises.} {tock} {5}
+#action {The sun falls slowly behind the walls of the city.} {tock} {5}
+#action {The sun slowly sinks in the west, casting long shadows across the city.} {tock} {5}
+#action {You feel your extra strength fading.} {tock} {5}
+#action {A harsh light emerges as the sun rises.} {tock} {5}
+#action {The sun bursts into the eastern skies.} {tock} {5}
+#action {As if by a painter's brush, the sun sets in a sky of violet, red, and blue.} {tock} {5}
+#action {Light breaks over the horizon through waves of heat as a new day begins.} {tock} {5}
+#action {The sky glows with the rising of the sun.} {tock} {5}
+#action {The sun begins to cast an orange glow on the trees as it rises.} {tock} {5}
+#action {The sun sinks behind the western wall of the city.} {tock} {5}
+#action {The tall towers above you shimmer brightly in the light of the rising sun.} {tock} {5}
+#action {The sun sets behind the Spine of the World.} {tock} {5}
+#action {The sun starts to rise above the walls of the city.} {tock} {5}
+#action {The darkness turns to a bright haze as the sun breaks the horizon to the east.} {tock} {5}
+#action {Dew settles on the grasslands as darkness descends.} {tock} {5}
+#action {The lilac blue of dawn begins to grace the sky from the east.} {tock} {5}
+#action {Heatwaves shimmer as the blistering sun arcs into the sky.} {tock} {5}
+#action {The blazing hot sun sinks beneath the horizon of the Waste.} {tock} {5}
+#action {The sun crests the horizon and light breaks through the trees.} {tock} {5}
+#action {The sky glows with subdued light as the sun dips below the horizon.} {tock} {5}
+#action {The sky turns red as a fiery sun sets in the west.} {tock} {5}
+#action {The sky turns orange and pink as the sun sinks into the Aryth Ocean.} {tock} {5}
+#action {The sun's blinding light is reflected in the lakes waters as it sets.} {tock} {5}
+#action {Golden rays of sunshine peek over the hills of the surrounding countryside.} {tock} {5}
+#action {Dew settles on the ground as the sun sets west of the mountains.} {tock} {5}
+#action {The blazing sun fades into greyness behind the towers.} {tock} {5}
+#action {The golden sun sinks down behind the rugged hills.} {tock} {5}
+#action {Ruddy amber hues streak across the vanishing horizon as night falls.} {tock} {5}
+#action {The sun sets behind the city's western wall.} {tock} {5}
+#action {The sun sinks into the hills.} {tock} {5}
+#action {The sunlight sweeps across the plains with the dawn.} {tock} {5}
+#action {The world is submerged into coolness as the sun sinks into the horizon.} {tock} {5}
+#action {As the sun lowers beneath the horizon, a gloomy darkness descends on the long road.} {tock} {5}
+#action {The sun casts its yellow light over the long road.} {tock} {5}
+#action {The sun slowly descends behind the hills.} {tock} {5}
+#action {Light fades as the red evening sun slowly drops below the horizon.} {tock} {5}
+#action {Vivid colors flood the sky as the sun sets over the hills.} {tock} {5} 
