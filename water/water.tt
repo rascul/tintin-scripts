@@ -1,0 +1,4 @@
+#alias es {#regexp {%1} {%+} {exam %1.$water} {exam $water}}
+#alias water {#regexp {%1} {%+} {#var water %1} {rem $water;drink $water;drink $water;wear $water}}
+#alias fwater {rem $water;fill $water %1;wear $water}
+
