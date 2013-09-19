@@ -1,8 +1,4 @@
-#ACTION {^You have scored %d experience points and %d quest points.$} {oldexp $$newexp;newexp %1;#math exp {$newexp - $oldexp};oldqp $$newqp;newqp %2;#math qp {$newqp - $oldqp}} {5}
-#ALIAS {exp} {#variable exp} {5}
-#ALIAS {newexp} {#variable newexp %1} {5}
-#ALIAS {newqp} {#variable newqp %1} {5}
-#ALIAS {oldexp} {#variable oldexp %1} {5}
-#ALIAS {oldqp} {#variable oldqp %1} {5}
-#ALIAS {qp} {#variable qp} {5}
-
+#action {^You have scored %d experience points and %d quest points.$} {#var oldexp $newexp;#var newexp %1;#math exp {$newexp - $oldexp};#var oldqp $newqp;#var newqp %2;#math qp {$newqp - $oldqp}} {4}
+#sub {^You have scored %d experience points and %d quest points.$} {You have scored %1 experience points and %2 quest points. ($exp/$qp)} {5}
+#alias exp {#var exp}
+#alias qp {#var qp}
