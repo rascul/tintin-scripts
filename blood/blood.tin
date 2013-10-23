@@ -1,0 +1,4 @@
+#alias es {#regexp {%1} {%+} {exam %1.$blood} {exam $blood}}
+#alias blood {#regexp {%1} {%+} {#var blood %1} {rem $blood;drink $blood;drink $blood;wear $blood}}
+#alias fblood {rem $blood;fill $blood %1;wear $blood}
+
