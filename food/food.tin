@@ -1,0 +1,1 @@
+#alias food #regexp {%1} {%+} {#var food %1} {get $food $bag;eat $food}
