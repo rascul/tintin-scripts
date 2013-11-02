@@ -1,2 +1,2 @@
 #action {^Offensive bonus: %d, Dodging bonus: %d, Parrying bonus: %d$} {#math def {%2 + %3}} 4
-#sub {^Offensive bonus: %d, Dodging bonus: %d, Parrying bonus: %d$} {^Offensive bonus: %1, Dodging bonus: %2, Parrying bonus: %3, Total defense: $def} 5
+#sub {^Offensive bonus: %d, Dodging bonus: %d, Parrying bonus: %d$} {^Offensive bonus: %1, Dodging bonus: %2, Parrying bonus: %3, Total bonus: $def} 5
