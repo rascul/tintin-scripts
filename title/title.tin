@@ -1,0 +1,1 @@
+#alias title #regexp {%1} {%+} {#var title %0} {change title $title}
