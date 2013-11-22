@@ -1,0 +1,5 @@
+#alias kb #regex {%1} {%+} {kill %1.bear} {kill bear}
+#alias kg #regex {%1} {%+} {kill %1.grass} {kill grass}
+#alias kp #regex {%1} {%+} {kill %1.pig} {kill pig}
+#alias kll #regex {%1} {%+} {kill %1.lizard} {kill lizard}
+
