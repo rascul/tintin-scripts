@@ -1,0 +1,5 @@
+#HIGHLIGHT {^[ obvious exits:%1 ]$} {cyan}
+#HIGHLIGHT {You disarm %1 weapon with one swift strike.$} {cyan}
+#HIGHLIGHT {You gain a level!} {cyan}
+#HIGHLIGHT {WANTED} {red}
+
