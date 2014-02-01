@@ -1,0 +1,48 @@
+#CLASS {MeleeColours}
+#ALIAS attackcolor {#COL %eval( %color( rev)+%color( @attackcolor, gray))}
+#ALIAS weavecolor {#COL %eval( %color( hi)+%color( rev)+%color( @weaveattackedcolor, black))}
+#ALIAS alertcolor {#COL %eval( %color( rev)+%color( @alertcolor, black))}
+#ALIAS attackedcolor {#COL %eval( %color( rev)+%color( @attackedcolor, grey))}
+#VAR attackcolor {green}
+#VAR attackedcolor {red}
+#VAR weaveattackedcolor {cyan}
+#VAR alertcolor {darkolivegreen}
+#VAR Attacks {tickles|hacks|slashes|scythes|strikes|smites|pounds|stabs|pierces|cleaves|blasts|hits|lances|crushes|shoots|whips|stings|slices|hits}
+#VAR Attack2 {tickle|hack|slash|scythe|strike|smite|pound|stab|pierce|cleave|blast|hit|lance|crush|shoot|whip|sting|slice|hit}
+#VAR bodypart {head|body|left hand|right hand|right foreleg|left foreleg||left arm|right arm|left leg|right leg|left foot|right foot|crown|roots|trunk|branch|paw}
+#TRIGGER {{@Attacks} your {@bodypart} into bloody fragments} {attackedcolor}
+#TRIGGER {{@Attacks} your {@bodypart} extremely hard} {attackedcolor}
+#TRIGGER {{@Attacks} your {@bodypart} very hard} {attackedcolor}
+#TRIGGER {{@Attacks} your {@bodypart} hard} {attackedcolor}
+#TRIGGER {{@Attacks} your {@bodypart}} {attackedcolor}
+#TRIGGER {* {@Attacks} your {@bodypart}} {attackedcolor}
+#TRIGGER {barely tickles your {@bodypart} with * {@Attacks}} {attackedcolor}
+#TRIGGER {barely {@Attacks} your {@bodypart}} {attackedcolor}
+#TRIGGER {tickles your {@bodypart} with * {@Attacks}} {attackedcolor}
+#TRIGGER {You {@Attack2} * {@bodypart} into bloody fragments} {#CW bold,orange}
+#TRIGGER {You {@Attack2} * {@bodypart} extremely hard} {#CW bold,orange}
+#TRIGGER {You {@Attack2} * {@bodypart} very hard} {#CW bold,orange}
+#TRIGGER {You {@Attack2} * {@bodypart} hard} {#CW bold,orange}
+#TRIGGER {You {@Attack2} * {@bodypart}} {#CW bold,orange}
+#TRIGGER {You barely {@Attack2} * {@bodypart}} {#CW bold,orange}
+#TRIGGER {You tickle * {@bodypart} with your {@Attack2}} {#CW bold,orange}
+#TRIGGER {You barely tickle * {@bodypart} with your {@Attack2}} {#CW bold,orange}
+#TRIGGER {Your bash at * sends * sprawling} {#CW bold,orange}
+#TRIGGER {Your boots need polishing again -- blood all over...} {#CW bold,orange}
+#TRIGGER {Your kick hits * in the solar plexus} {#CW bold,orange}
+#TRIGGER {sends ~*%w~* sprawling with a powerful bash!} {#COL bold,darkblue,wheat}
+#TRIGGER {sends you sprawling with a powerful bash} {#COL white,cyan}
+#TRIGGER {You're hit in solar plexus, wow, this is breathtaking} {#COL blue,lightgoldenrodyellow}
+#TRIGGER {You sense a hidden lifeform in the area...} {#CW bold,white}
+#TRIGGER {Suddenly * places something in your back!} {#CW bold,cyan}
+#TRIGGER {starts barreling down on you, a * aimed at your chest.} {#COL white,tomato}
+#TRIGGER {wipes * boots in your face} {#COL lightsalmon,lightgoldenrodyellow}
+#TRIGGER {You gasp in pain as streaks of fire from * burn your body} {#COL blue,violet}
+#TRIGGER {Your body is pierced by razor sharp ice spikes sent by} {#COL blue,violet}
+#TRIGGER {The air around your eyes seems to catch fire, blinding you} {#COL blue,violet}
+#TRIGGER {Arrrgggh!!! Your body is on FIRE! You have precious few moments to save your sorry life} {#COL blue,violet}
+#TRIGGER {calls lightning from the sky to strike you, sizzling your insides} {#COL blue,violet}
+#TRIGGER {gestures and you begin to lose your balance.} {#COL blue,violet}
+#TRIGGER {The impact of an unseen force sends you sprawling!} {#COL white,cyan}
+#CLASS 0
+
