@@ -1,0 +1,55 @@
+#action {^%d. %d item%? stored for %d days, %+ rent due.$} {
+	#action {^    %+$} {
+		#list store add {%%1};
+		#unaction {^    %+$}
+	}
+}
+
+#var char {elam}
+
+#alias li {list}
+#alias lis {list}
+
+#alias list {
+	#list store create;
+	#action {^%%1 HP:%%2 MV:%%3 > $} {store_list};
+	#action {^You can buy:$} {clear_list_action};
+	#action {^Sorry, but you can't do that here!$} {clear_list_action};
+	#send list
+}
+
+#alias clear_list_action {
+	#unaction {^%%1 HP:%%2 MV:%%3 > $};
+}
+
+#alias store_list {
+	clear_list_action;
+	check_rent_name;
+	clear_rent;
+	store_rent
+}
+
+#alias check_rent_name {
+	#unvar rent_id;
+	#script {result} {sqlite3 wotmut.db 'select id from rent_locations where name = "$room"'};
+	#if {$result[1]} {
+		#var rent_id {$result[1]}
+	} {
+		#script {result} {sqlite3 wotmut.db 'insert into rent_locations (name) values ("$room")'};
+		#script {result} {sqlite3 wotmut.db 'select id from rent_locations where name = "$room"'};
+		#var rent_id {$result[1]}
+	}
+}
+
+#alias clear_rent {
+	#script {result} {sqlite3 wotmut.db 'delete from rent_items where char = "$char" and rentid = $rent_id'}
+}
+
+#alias store_rent {
+	#foreach {$store[%*]} {item} {
+		#script {result} {sqlite3 wotmut.db 'insert into rent_items values ("$char", $rent_id, "$item")'}
+	}
+}
+
+
+
