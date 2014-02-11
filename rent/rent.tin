@@ -31,8 +31,6 @@
 
 #alias check_rent_name {
 	#unvar rent_id;
-	#nop #var eroom $room;
-	#nop #replace eroom {'} {\\'};
 	#script {result} {sqlite3 wotmut.db "select id from rent_locations where name = \"$room\""};
 	#if {$result[1]} {
 		#var rent_id {$result[1]}
