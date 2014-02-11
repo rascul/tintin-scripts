@@ -21,6 +21,9 @@
 
 #alias clear_list_action {
 	#unaction {^%%1 HP:%%2 MV:%%3 > $};
+	#action {^You can buy:$} {clear_list_action};
+	#action {^Sorry, but you can't do that here!$} {clear_list_action};
+	#action {^The barracks keeper says 'Nalav, you are in trouble aren't you?  Find lodging elsewhere!'$}
 }
 
 #alias store_list {
