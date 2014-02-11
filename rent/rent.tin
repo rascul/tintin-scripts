@@ -5,7 +5,7 @@
 	}
 }
 
-#var char {elam}
+#nop #var char {elam}
 
 #alias li {list}
 #alias lis {list}
@@ -31,23 +31,25 @@
 
 #alias check_rent_name {
 	#unvar rent_id;
-	#script {result} {sqlite3 wotmut.db 'select id from rent_locations where name = "$room"'};
+	#nop #var eroom $room;
+	#nop #replace eroom {'} {\\'};
+	#script {result} {sqlite3 wotmut.db "select id from rent_locations where name = \"$room\""};
 	#if {$result[1]} {
 		#var rent_id {$result[1]}
 	} {
-		#script {result} {sqlite3 wotmut.db 'insert into rent_locations (name) values ("$room")'};
-		#script {result} {sqlite3 wotmut.db 'select id from rent_locations where name = "$room"'};
+		#script {result} {sqlite3 wotmut.db "insert into rent_locations (name) values (\"$room\")"};
+		#script {result} {sqlite3 wotmut.db "select id from rent_locations where name = \"$room\""};
 		#var rent_id {$result[1]}
 	}
 }
 
 #alias clear_rent {
-	#script {result} {sqlite3 wotmut.db 'delete from rent_items where char = "$char" and rentid = $rent_id'}
+	#script {result} {sqlite3 wotmut.db "delete from rent_items where char = \"$char\" and rentid = $rent_id"}
 }
 
 #alias store_rent {
 	#foreach {$store[%*]} {item} {
-		#script {result} {sqlite3 wotmut.db 'insert into rent_items values ("$char", $rent_id, "$item")'}
+		#script {result} {sqlite3 wotmut.db "insert into rent_items values (\"$char\", $rent_id, \"$item\")"}
 	}
 }
 
