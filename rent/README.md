@@ -27,3 +27,4 @@ When you're at a rent location, just use the `list` command (or `lis` or `li`)
 and the script will automagically figure out what's there and update the database
 with the stuff.
 
+Use the `show_storage` alias to list stuff for your character.
