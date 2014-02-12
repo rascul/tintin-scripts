@@ -5,14 +5,16 @@ With this stuff you can keep track of what you have in rents.
 
 You can't copy/paste this one. You have to do it like this: `#read rent.tin`
 
-Set your character name like so:
-
-`char <character name>`
-
-Now you should create the database. You need sqlite3 installed, then do this from
+First you should create the database. You need sqlite3 installed, then do this from
 the command line:
 
 `sqlite3 wotmut.db < rent.sql`
+
+The rest of the stuff is done from tintin++.
+
+Set your character name like so:
+
+`char <character name>`
 
 Use a different name than wotmut.db if you want. If it's in a different path, set
 that also:
@@ -27,4 +29,4 @@ When you're at a rent location, just use the `list` command (or `lis` or `li`)
 and the script will automagically figure out what's there and update the database
 with the stuff.
 
-Use the `show_storage` alias to list stuff for your character.
+Use the `storage` alias to list stuff for your character.

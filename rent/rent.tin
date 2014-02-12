@@ -1,4 +1,4 @@
-#var char nobody
+#var char {}
 #alias char {#var char %1}
 
 #var db wotmut.db
@@ -7,41 +7,58 @@
 #action {~\e[0m\e[36m%1$} {#regex {%1} {%w speaks from the %*} {#nop} {#var room %1}} {3}
 #action {~%1 HP:%2 MV:%3 > \e[36m%4$} {#regex {%4} {%w speaks from the %*} {#nop} {#var room %4}} {3}
 
-#action {^%d. %d item%? stored for %d days, %+ rent due.$} {
+#alias li {list}
+#alias lis {list}
+#alias list {
+	#if {!$char} {
+		#showme {You must set your character before you can use the database.};
+		#showme {  char <character name>}
+	} {
+		check_char;
+		#list store create;
+		create_list_actions
+	};
+	#send list
+}
+
+#alias create_list_actions {
+	#action {^%%1 HP:%%2 MV:%%3 > $} {store_list};
+	#action {^%d. %d item%? stored for %d days, %+ rent due.$} {
+		create_list_item_action
+	}
+}
+
+#alias create_list_item_action {
 	#action {^    %+$} {
 		#list store add {%%1};
 		#unaction {^    %+$}
 	}
 }
 
-#alias li {list}
-#alias lis {list}
-
-#alias list {
-	#list store create;
-	#action {^%%1 HP:%%2 MV:%%3 > $} {store_list};
-	#action {You can buy:$} {clear_list_action};
-	#action {Sorry, but you can't do that here!$} {clear_list_action};
-	#action {The barracks keeper says 'Nalav, you are in trouble aren't you?  Find lodging elsewhere!'$} {clear_list_action};
-	#send list
-}
-
-#alias clear_list_action {
+#alias clear_list_actions {
 	#unaction {^%%1 HP:%%2 MV:%%3 > $};
-	#unaction {^You can buy:$};
-	#unaction {^Sorry, but you can't do that here!$};
-	#unaction {^The barracks keeper says 'Nalav, you are in trouble aren't you?  Find lodging elsewhere!'$}
+	#unaction {^%d. %d item%? stored for %d days, %+ rent due.$}
 }
 
 #alias store_list {
-	clear_list_action;
-	check_rent_name;
-	clear_rent;
-	store_rent
+	clear_list_actions;
+	#var rent_id {};
+	#list store size store_size;
+	#if {$store_size} {
+		store_rent_location;
+		clear_rent;
+		store_rent
+	}
 }
 
-#alias check_rent_name {
-	#unvar rent_id;
+#alias check_char {
+	#script {result} {sqlite3 "$db" "select name from chars where name = \"$char\""};
+	#if {!$result} {
+		#script {result} {sqlite3 "$db" "insert into chars (name) values (\"$char\")"}
+	}
+}
+
+#alias store_rent_location {
 	#script {result} {sqlite3 "$db" "select id from rent_locations where name = \"$room\""};
 	#if {$result[1]} {
 		#var rent_id {$result[1]}
@@ -58,13 +75,14 @@
 
 #alias store_rent {
 	#foreach {$store[%*]} {item} {
-		#script {result} {sqlite3 "$db" "insert into rent_items values (\"$char\", $rent_id, \"$item\")"}
+		#script {result} {sqlite3 "$db" "pragma foreign_keys = on;insert into rent_items values (\"$char\", $rent_id, \"$item\")"}
 	}
 }
 
-#alias show_storage {
-	#script {result} {sqlite3 -column "$db" "select rent_locations.name, rent_items.name from rent_items, rent_locations where char = \"$char\" and rent_items.rentid = rent_locations.id"};
+#alias storage {
+	#script {result} {sqlite3 -separator ":  " "$db" "select rent_locations.name, rent_items.name from rent_items, rent_locations where char = \"$char\" and rent_items.rentid = rent_locations.id"};
 	#foreach {$result[%*]} {item} {
 		#showme $item
 	}
 }
+

@@ -1,3 +1,5 @@
+pragma foreign_keys = on;
+
 create table chars (
   name text primary key
 );
@@ -8,8 +10,8 @@ create table rent_locations (
 );
 
 create table rent_items (
-  char text,
-  rentid integer,
+  char text not null,
+  rentid integer not null,
   name text not null,
   foreign key(char) references chars(name),
   foreign key(rentid) references rent_locations(id)
